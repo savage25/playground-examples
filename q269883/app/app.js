@@ -6,7 +6,7 @@ export default class App extends LightningElement {
         return "";
     }
     connectedCallback() {
-        window.addEventListener("beforeunload", this.beforeUnloadHandler);
+        window.addEventListener("beforeunload", this.beforeUnloadHandler.bind(this));
         console.log("connectedCallback executed");
     }
     disconnectedCallback() {
